@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -11,7 +11,7 @@ contract Assignment8 is ERC721URIStorage, Ownable {
     uint256 private _tokenIdCounter;
 
     // pass name and symbol of the nft token collection
-    constructor() ERC721("Hedia", "HAD") {
+    constructor() ERC721("Hedia", "HAD") Ownable(msg.sender){
     }
 
     // make this function visibility: external
