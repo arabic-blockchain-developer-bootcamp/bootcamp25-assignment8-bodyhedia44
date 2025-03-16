@@ -11,8 +11,7 @@ contract Assignment8 is ERC721URIStorage, Ownable {
     uint256 private _tokenIdCounter;
 
     // pass name and symbol of the nft token collection
-    constructor(string memory name_, string memory symbol_) ERC721(name_, symbol_) {
-        _tokenIdCounter = 0;
+    constructor() ERC721("Hedia", "HAD") {
     }
 
     // make this function visibility: external
